@@ -1,4 +1,4 @@
-from utilities.help import time_clear
+from utilities.helper import time_clear
 
 #Ex01.: Tratamento de erro
 print(' ===== Cálculo de produtividade =====\n')
