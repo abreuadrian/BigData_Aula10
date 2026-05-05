@@ -12,9 +12,8 @@ while True:
         print(f'\nMédia por funcionário: R${media_funcionario:.2f}')
         break
     except ValueError: 
-            print('\nErro. Informe um valor válido.')
-            time_clear(1.5)
+        print('\nErro. Informe um valor válido.')
+        time_clear(1.5)
     except ZeroDivisionError:
-            print('\nInforme um número de funcionários válido.')
-            time_clear(1.5)
-    
+        print('\nInforme um número de funcionários válido.')
+        time_clear(1.5)

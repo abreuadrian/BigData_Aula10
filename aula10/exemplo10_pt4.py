@@ -6,11 +6,15 @@ try:
     funcionarios = int(input('Informe o total de funcionários: '))
     media_funcionario = total_produzido / funcionarios
 except ValueError: 
-        print('\nErro. Informe um valor válido.')
-        time_clear(1.5)
+    print('\nErro. Informe um valor válido.')
+    time_clear(1.5)
 except ZeroDivisionError:
-        print('\nInforme um número de funcionários válido.')
-        time_clear(1.5)
+    print('\nInforme um número de funcionários válido.')
+    time_clear(1.5)
+except KeyboardInterrupt:
+    print('\nPrograma interrompido pelo usuário.')
+    time_clear(1.5)
+      
 else: 
     print(f'\nMédia por funcionário: R${media_funcionario:.2f}')
 finally:  #Executa sempre. Com erro ou não.
