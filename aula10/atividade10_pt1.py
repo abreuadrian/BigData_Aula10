@@ -1,26 +1,32 @@
 #Atividade 01
 SALDO = 1000
 def saque():
-    while True:
-        try:
-            n = float(input('Informe o valor do saque: R$'))
-            if n > SALDO:
-                print('Saldo insuficiente.')
-                continue
-            if n > 0:
-                return n
+        while True:
+            try:
+                n = float(input('Informe o valor do saque: R$'))
+            except ValueError:
+                print('Erro. Insira um número válido. ')
             else: 
-                print('Digite um número maior que 0.')
-        except ValueError:
-            print('Erro. Insira um número válido. ')
+                return n
 
+def verify_saque(n):
+        if n > SALDO:
+            print('Saldo insuficiente.')
+        elif n <= 0:
+            print('Digite um número maior que 0.')
+        else: 
+            return n
+            
 def calc_total(saque):
         return SALDO - saque
 
 def display(saque, novo_saldo):
-    print(f'Foi sacado R${saque:.2f} e restou R${novo_saldo:.2f} na conta')
+    print(f'\nFoi sacado R${saque:.2f} e restou R${novo_saldo:.2f} na conta')
 
-n = saque()
+while True:
+    n = saque()
+    if verify_saque(n):
+        break
 total = calc_total(n)
 
 display(n, total)
