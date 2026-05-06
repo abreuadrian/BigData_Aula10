@@ -10,7 +10,7 @@ except KeyboardInterrupt:
     print('\nPrograma interrompido pelo usuário.')
 else: 
     print(f'\nMédia por funcionário: R${media_funcionario:.2f}')
-    
+
 finally:  
     print('Programa Encerrado')
     
