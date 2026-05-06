@@ -1,5 +1,6 @@
 #Atividade 01
-SALDO = 1000
+saldo = 1000
+
 def saque():
         while True:
             try:
@@ -10,7 +11,7 @@ def saque():
                 return n
 
 def verify_saque(n):
-        if n > SALDO:
+        if n > saldo:
             print('Saldo insuficiente.')
         elif n <= 0:
             print('Digite um número maior que 0.')
@@ -18,7 +19,7 @@ def verify_saque(n):
             return n
             
 def calc_total(saque):
-        return SALDO - saque
+        return saldo - saque
 
 def display(saque, novo_saldo):
     print(f'\nFoi sacado R${saque:.2f} e restou R${novo_saldo:.2f} na conta')
