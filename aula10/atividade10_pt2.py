@@ -1,3 +1,6 @@
+#Atividade 02
+from utilities.helper import time_clear
+
 EMPLOYEE_QNT = 3
 
 class Employee:
