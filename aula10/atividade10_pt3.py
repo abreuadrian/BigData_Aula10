@@ -46,7 +46,6 @@ def display():
     print(f'Peso: {weight} - {status}')
     if status == 'Peso excedido':
         print(f'Multa: R${calc_multa(weight):.2f}')
-    continue_or_not()
     time_clear(0.7)
 
 
