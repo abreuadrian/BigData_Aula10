@@ -1,5 +1,5 @@
 #Atividade 02
-from utilities.helper import time_clear #Colocar time clear
+from utilities.helper import time_clear 
 
 EMPLOYEE_QNT = 3
 
@@ -43,14 +43,18 @@ def bonus_salary():
         except ValueError:
             print('Erro. Insira um bônus válido.')
 
-list_employers = []
-for i in range(EMPLOYEE_QNT):
-    name = get_name()
-    salary = base_salary()
-    bonus = bonus_salary()
-    funcionario = Employee(name, salary, bonus)
-    list_employers.append(funcionario)
 
-for emp in list_employers:
-      print(emp)
-      print()
+if __name__ == '__main__':
+    list_employers = []
+    for i in range(EMPLOYEE_QNT):
+        print(f'{i+1}º Funcionário')
+        name = get_name()
+        salary = base_salary()
+        bonus = bonus_salary()
+        time_clear(1)
+        funcionario = Employee(name, salary, bonus)
+        list_employers.append(funcionario)
+
+    for emp in list_employers:
+        print(emp)
+        print()
