@@ -1,5 +1,5 @@
 #Atividade 02
-from utilities.helper import time_clear
+from utilities.helper import time_clear #Colocar time clear
 
 EMPLOYEE_QNT = 3
 
