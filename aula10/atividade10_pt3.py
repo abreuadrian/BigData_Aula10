@@ -48,9 +48,9 @@ def display():
         print(f'Multa: R${calc_multa(weight):.2f}')
     time_clear(0.7)
 
-
-while True:
-    display()
-    if not continue_or_not():
-        time_clear(0.7)
-        break
+if __name__ == '__main__':
+    while True:
+        display()
+        if not continue_or_not():
+            time_clear(0.7)
+            break
